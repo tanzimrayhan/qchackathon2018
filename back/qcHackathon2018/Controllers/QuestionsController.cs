@@ -7,13 +7,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace qcHackathon2018.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class QuestionsController : ControllerBase
+    [Produces("application/json")]
+    [Route("api/questions")]
+   
+    public class QuestionsController : Controller
     {
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Models.Question question)
         {
         }
     }
